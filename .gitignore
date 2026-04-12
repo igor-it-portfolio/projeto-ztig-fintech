@@ -1,0 +1,24 @@
+# Pasta de cache do Terraform (onde ficam os providers)
+.terraform/
+
+# Arquivos de estado (MUITO IMPORTANTE: Nunca envie isso para o Git)
+*.tfstate
+*.tfstate.*
+
+# Arquivos de variáveis sensíveis (onde você pode salvar senhas)
+*.tfvars
+*.tfvars.json
+
+# Arquivos de log e crash
+crash.log
+*.usage.log
+
+# Arquivos de variáveis locais
+.terraform.tfstate.lock.info
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Pasta de planos (se você salvar o plan em arquivo)
+*.tfplan
