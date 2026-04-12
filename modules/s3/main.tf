@@ -26,7 +26,7 @@ resource "aws_s3_bucket_policy" "trava_seguranca_bucket" {
         Condition = {
           NotIpAddress = {
             # Aqui também é bom usar a variável do módulo se você a definiu
-            "aws:SourceIp" = ["45.184.202.114/32"] 
+            "aws:SourceIp" = ["203.0.113.10/32"] 
           }
         }
       }

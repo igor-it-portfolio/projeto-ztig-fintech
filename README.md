@@ -65,7 +65,7 @@ Clone o repositório:
 
 
 Bash
-git clone https://github.com/SEU-USUARIO/projeto-ztig-fintech.git
+git clone 
 Inicialize os módulos:
 
 Bash

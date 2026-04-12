@@ -17,7 +17,7 @@ resource "aws_iam_policy" "auditor_job_function_policy" {
         ]
         Condition = {
           NotIpAddress = {
-            "aws:SourceIp" = ["45.184.202.114/32"] 
+            "aws:SourceIp" = ["203.0.113.10/32"] 
           }
         }
       },
