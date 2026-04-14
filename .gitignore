@@ -22,3 +22,5 @@ override.tf.json
 
 # Pasta de planos (se você salvar o plan em arquivo)
 *.tfplan
+
+.terraform.lock.hcl
