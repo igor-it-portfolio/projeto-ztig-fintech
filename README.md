@@ -42,15 +42,13 @@ A política de acesso não verifica apenas "quem", mas "como" e "de onde":
 ### 3. Prevenção de Drift e Auditoria
 O uso de **Terraform** garante que a governança seja imutável. Qualquer alteração manual no console da AWS será detectada como um desvio (Drift) de conformidade.
 
-
-
 ---
 
-## 🛠️ Detalhes da Implementação Técnica
-
 ### IAM Policy Logic (Trecho de Código)
+
 ```hcl
 # Exemplo da lógica de bloqueio preventivo (GRC)
+# Garante que o acesso só ocorra via IP autorizado e com MFA ativo
 Condition = {
   NotIpAddress = {
     "aws:SourceIp" = [var.my_ip] 
@@ -59,27 +57,25 @@ Condition = {
     "aws:MultiFactorAuthPresent" = "true"
   }
 }
+```
+---
 
-## 🚀 Como Validar a Governança
-Clone o repositório:
+### 🚀 Como Validar a Governança
 
+**1. Clone o repositório:**
+```bash
+git clone https://github.com/igor-it-portfolio/projeto-ztig-fintech.git
 
-Bash
-git clone 
-Inicialize os módulos:
-
-Bash
 terraform init
 Valide a conformidade técnica (Sintaxe e Variáveis):
 
-Bash
 terraform validate
 Gere o relatório de impacto (Simulação de Auditoria):
 
-Bash
 terraform plan
-
+```
+---
    👨‍💻 Perfil do Desenvolvedor
-Igor C. - Especialista em Governança de Identidade (IAM) e Cloud Security.
+Igor Pantoja. - Especialista em Governança de Identidade (IAM) e Cloud Security.
 
-Focado em transformar requisitos complexos de conformidade em código seguro e auditável (DevSecOps).
+Focado em transformar requisitos complexos de conformidade em código seguro e auditável.
